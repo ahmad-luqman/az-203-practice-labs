@@ -23,7 +23,7 @@ namespace az203labs.vm_provision
             var adminPassword = "Pa$$w0rd!2019";
 
             //Create the management client. This will be used for all the operations that we will perform in Azure.
-            var credentials = SdkContext.AzureCredentialsFactory.FromFile("../../../azureauth.properties");
+            var credentials = SdkContext.AzureCredentialsFactory.FromFile("./azureauth.properties");
             var azure = Azure.Configure()
                 .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
                 .Authenticate(credentials)
